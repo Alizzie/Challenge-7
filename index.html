@@ -20,7 +20,10 @@
     <div class="illustrations">
       <div class="shadow">
         <div class=illu>
-          <img src="images/illustration-woman-online-mobile.svg" alt="ds">
+          <picture>
+            <source srcset="images/illustration-woman-online-desktop.svg" alt="illustration" media="(min-width: 1025px)">
+              <img class="illuImage" src="images/illustration-woman-online-mobile.svg" alt="illustration">
+          </picture>
         </div>
       </div>
       <div class="desktopBox">
@@ -45,10 +48,10 @@
         <hr>
         <div class="content">
           <div class="question">
-            <h4>What is the maximum file upload size?</h4>
+            <h4 class="bold">What is the maximum file upload size?</h4>
             <img class="arrow" src="images/icon-arrow-down.svg" alt="arrow">
           </div>
-          <div class="answer">
+          <div class="answer showAnswer">
             <p>No more than 2GB. All files in your account must fit your allotted storage space.</p>
           </div>
         </div>

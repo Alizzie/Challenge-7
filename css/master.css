@@ -1,26 +1,4 @@
-/* #### Text
-
-- Very dark desaturated blue: hsl(238, 29%, 16%)
-- Soft red: hsl(14, 88%, 65%)
-
-#### Gradient
-Background gradient:
-
-- Soft violet: hsl(273, 75%, 66%)
-- Soft blue: hsl(240, 73%, 65%)
-
-#### Text
-
-- Very dark grayish blue: hsl(237, 12%, 33%)
-- Dark grayish blue: hsl(240, 6%, 50%)
-
-#### Dividers
-
-- Light grayish blue: hsl(240, 5%, 91%)
-
-
-### Body Copy
-- Font size: 12px */
+/* Mobile Styling min-width: 350px */
 body {
   background: no-repeat linear-gradient(to top, hsl(240, 73%, 65%), hsl(273, 75%, 66%));
   font-family: 'Kumbh Sans', sans-serif;
@@ -39,10 +17,6 @@ h4 {
   margin: 0;
 }
 
-.bold {
-  font-weight: 700;
-}
-
 p {
   font-size: 12px;
   line-height: 1.5;
@@ -55,6 +29,7 @@ hr {
   border-top: solid 1px hsl(240, 5%, 91%);
 }
 
+/* FAQ Card */
 .contentBackground {
   background: white;
   border-radius: 30px;
@@ -64,6 +39,7 @@ hr {
   box-shadow: 0 20px 30px 2px rgb(0, 0, 0, 0.2);
 }
 
+/* Illustration Stylings */
 .shadow {
   background: center/ contain no-repeat url("../images/bg-pattern-mobile.svg");
   width: 240px;
@@ -82,6 +58,7 @@ hr {
   display: none;
 }
 
+/* Questions Stylings */
 .heading {
   padding: 9% 0 11%;
 }
@@ -89,10 +66,6 @@ hr {
 .arrow {
   transition: 0.8s;
   position: relative;
-}
-
-.rotateArrow {
-  transform: rotate(180deg);
 }
 
 .question {
@@ -106,12 +79,25 @@ hr {
   display: none;
 }
 
+/* question is clicked, functionality with JS */
+/* h1 */
+.bold {
+  font-weight: 700;
+}
+
+/* Arrow */
+.rotateArrow {
+  transform: rotate(180deg);
+}
+
+/* answer */
 .showAnswer {
   display: block;
   opacity: 1;
   animation: fade 0.8s ease;
 }
 
+/* CSS Animtation for showAnswer */
 @keyframes fade {
   0%, 100% {
     opacity: 0
@@ -122,6 +108,7 @@ hr {
   }
 }
 
+/* Attribution Styling */
 .attribution {
   font-size: 10px;
   text-align: center;
@@ -131,4 +118,133 @@ hr {
 .attribution a {
   color: hsl(240, 5%, 91%);
   text-decoration: none;
+}
+
+/* Media Query min-width: 500px */
+@media all and (min-width: 500px) {
+
+  /* FAQ Card */
+  .contentBackground {
+    width: 58%;
+    margin: 30% auto 22%;
+  }
+}
+
+/* Media Query min-width: 650px */
+@media all and (min-width: 650px) {
+
+  /* FAQ Card */
+  .contentBackground {
+    width: 43%;
+    margin: 22% auto 15%;
+  }
+}
+
+/* Media Query min-width: 800px */
+@media all and (min-width: 800px) {
+
+  /* FAQ Card */
+  .contentBackground {
+    width: 35%;
+    margin: 18% auto 10%;
+  }
+}
+
+
+
+/* Desktop Styling min-width: 1025px */
+@media all and (min-width: 1025px) {
+  h1 {
+    text-align: left;
+  }
+
+  hr {
+    margin: 5% 0%;
+  }
+
+  /* FAQ Card */
+  .contentBackground {
+    margin: 9% auto;
+    width: 85%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 0;
+  }
+
+  /* Illustration Stylings */
+  .illustrations {
+    position: relative;
+  }
+
+  .shadow {
+    background-image: url("../images/bg-pattern-desktop.svg");
+    background-repeat: no-repeat;
+    background-size: 210%;
+    background-position: 112% 67%;
+    width: 28.5rem;
+    height: 31.25rem;
+    overflow: hidden;
+  }
+
+  .illu {
+    position: absolute;
+    bottom: 15%;
+    left: -17%;
+  }
+
+  .desktopBox {
+    display: block;
+    position: absolute;
+    bottom: 22.5%;
+    left: -20.5%;
+    transition: 0.2s;
+  }
+
+  .desktopBoxHover {
+    bottom: 23%;
+    left: -28%;
+  }
+
+  /* Questions Stylings */
+  .faq {
+    padding: 0 11% 0 2%;
+    width: 100%;
+  }
+
+  .heading {
+    padding: 0 0 10%;
+  }
+
+  /* question is clicked, functionality with JS */
+  .redText {
+    color: hsl(14, 88%, 65%);
+  }
+}
+
+/* Media Query min-width: 1100px */
+@media all and (min-width: 1100px) {
+
+  /* FAQ Card */
+  .contentBackground {
+    width: 78%;
+  }
+}
+
+/* Media Query min-width: 1200px */
+@media all and (min-width: 1200px) {
+
+  /* FAQ Card */
+  .contentBackground {
+    width: 71%;
+  }
+}
+
+/* Media Query min-width: 1350px */
+@media all and (min-width: 1350px) {
+
+  /* FAQ Card */
+  .contentBackground {
+    width: 63.7%;
+  }
 }

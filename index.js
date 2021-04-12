@@ -1,22 +1,23 @@
 // Selecting Elements
-const arrows = Array.from(document.getElementsByTagName("img")).slice(2,7);
+const arrows = Array.from(document.getElementsByTagName("img")).slice(2, 7);
 const questions = Array.from(document.getElementsByClassName("question"));
 const answers = Array.from(document.getElementsByClassName("answer"));
 const questionHeading = Array.from(document.getElementsByTagName("h4"));
+const box = document.getElementsByClassName("desktopBox")[0];
 
 // Hide/ Show answer when question is clicked
 
 // Collapsing all
-function collapseAll () {
-   answers.forEach(answer => answer.classList.remove("showAnswer"));
-   arrows.forEach(arrow => arrow.classList.remove("rotateArrow"));
-   questionHeading.forEach(heading => heading.classList.remove("bold"));
-   return true;
+function collapseAll() {
+  answers.forEach(answer => answer.classList.remove("showAnswer"));
+  arrows.forEach(arrow => arrow.classList.remove("rotateArrow"));
+  questionHeading.forEach(heading => heading.classList.remove("bold"));
+  return true;
 }
 
 // open one
 for (let i = 0; i < questions.length; i++) {
-  questions[i].addEventListener("click", function(){
+  questions[i].addEventListener("click", function() {
 
     if (answers[i].classList[1] === "showAnswer") {
       collapseAll();
@@ -26,6 +27,19 @@ for (let i = 0; i < questions.length; i++) {
       arrows[i].classList.add("rotateArrow");
       questionHeading[i].classList.add("bold");
     }
-
   })
 }
+
+// Hover Styling for desktop
+
+questions.forEach(function(question){
+
+  question.addEventListener("mouseover", function(){
+    box.classList.add("desktopBoxHover");
+    question.classList.add("redText");
+  });
+  question.addEventListener("mouseout", function(){
+    box.classList.remove("desktopBoxHover");
+    question.classList.remove("redText");
+  });
+})
